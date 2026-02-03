@@ -1,0 +1,109 @@
+/* Custom App Styles */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Remove default outlines and add custom focus states */
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid #D4AF37;
+  outline-offset: 2px;
+}
+
+/* Selection color */
+::selection {
+  background-color: #002366;
+  color: white;
+}
+
+/* Prevent horizontal scroll */
+body {
+  overflow-x: hidden;
+}
+
+/* Accordion animation fix */
+[data-state="open"] > .accordion-chevron {
+  transform: rotate(180deg);
+}
+
+/* Tabs active state */
+[data-state="active"] {
+  position: relative;
+}
+
+/* Razorpay button override */
+.razorpay-payment-button {
+  display: none !important;
+}
+
+/* Toast customization */
+[data-sonner-toaster] {
+  font-family: 'Manrope', sans-serif !important;
+}
+
+/* Loading shimmer effect */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.loading-shimmer {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e0e0e0 50%,
+    #f0f0f0 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+/* Image hover zoom container */
+.image-zoom-container {
+  overflow: hidden;
+}
+
+.image-zoom-container img {
+  transition: transform 0.5s ease;
+}
+
+.image-zoom-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Custom list styles */
+.custom-list li::marker {
+  color: #D4AF37;
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #002366 0%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  body {
+    font-size: 12pt;
+  }
+  
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+}
