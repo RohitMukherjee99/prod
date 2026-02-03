@@ -1,0 +1,125 @@
+{
+  "design_system": {
+    "typography": {
+      "font_family": {
+        "heading": "Playfair Display, serif",
+        "body": "Manrope, sans-serif",
+        "mono": "JetBrains Mono, monospace"
+      },
+      "scale": {
+        "h1": "text-5xl md:text-7xl font-bold tracking-tight leading-[1.1]",
+        "h2": "text-4xl md:text-5xl font-semibold tracking-tight",
+        "h3": "text-2xl md:text-3xl font-medium",
+        "body": "text-base md:text-lg leading-relaxed text-slate-600"
+      }
+    },
+    "colors": {
+      "palette": {
+        "primary": {
+          "DEFAULT": "#002366",
+          "foreground": "#FFFFFF",
+          "50": "#E6F0FF",
+          "100": "#CCE0FF",
+          "500": "#3366FF",
+          "900": "#002366"
+        },
+        "secondary": {
+          "DEFAULT": "#D4AF37",
+          "foreground": "#0F172A",
+          "50": "#FFF9E6",
+          "500": "#D4AF37",
+          "900": "#8A7018"
+        },
+        "background": {
+          "light": "#F8FAFC",
+          "dark": "#020617"
+        },
+        "surface": {
+          "card": "#FFFFFF",
+          "muted": "#F1F5F9"
+        }
+      },
+      "gradients": {
+        "hero": "bg-gradient-to-br from-slate-50 via-blue-50 to-slate-100",
+        "gold_shine": "bg-gradient-to-r from-transparent via-[#D4AF37] to-transparent",
+        "blue_depth": "bg-gradient-to-b from-[#002366] to-[#020617]"
+      }
+    },
+    "spacing": {
+      "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      "section_padding": "py-20 md:py-32",
+      "grid_gap": "gap-8 md:gap-12"
+    },
+    "visual_enhancers": {
+      "glassmorphism": "bg-white/70 backdrop-blur-xl border border-white/20 shadow-sm",
+      "shadows": {
+        "card": "shadow-[0_8px_30px_rgb(0,0,0,0.04)]",
+        "floating": "shadow-[0_20px_50px_rgb(0,35,102,0.15)]"
+      },
+      "borders": {
+        "subtle": "border border-slate-200",
+        "gold_accent": "border-l-4 border-[#D4AF37]"
+      },
+      "radius": "rounded-2xl"
+    }
+  },
+  "components": {
+    "Hero": {
+      "path": "src/components/Hero.js",
+      "structure": "Split layout. Left: 3D Typography (Playfair) with 'OSI CONFERENCE 2026'. Right: Abstract Blue Glass 3D visual.",
+      "animation": "Text stagger reveal using Framer Motion. Parallax on background image.",
+      "image_url": "https://images.unsplash.com/photo-1764776264351-8a9c86d05338"
+    },
+    "Navbar": {
+      "path": "src/components/Navbar.js",
+      "style": "Fixed, Glassmorphism. Logo left, Links center, 'Register' Gold Button right.",
+      "behavior": "Hide on scroll down, show on scroll up (smart nav)."
+    },
+    "Speakers": {
+      "path": "src/components/Speakers.js",
+      "layout": "Bento Grid. Mix of large feature cards (Keynote) and smaller standard cards.",
+      "card_style": "Minimalist white cards with grayscale photos that turn color on hover.",
+      "image_url": "https://images.unsplash.com/photo-1764874299006-bf4266427ec9"
+    },
+    "Registration": {
+      "path": "src/components/Registration.js",
+      "style": "Pricing Table with 'Tracing Beam' effect. Gold beam moving around the 'Early Bird' card.",
+      "features": "Razorpay integration button (Mocked)."
+    },
+    "About": {
+      "path": "src/components/About.js",
+      "style": "Asymmetric layout. Text block overlapping a large clinical image.",
+      "image_url": "https://images.unsplash.com/photo-1565090567208-c8038cfcf6cd"
+    },
+    "Venue": {
+      "path": "src/components/Venue.js",
+      "style": "Full width image with overlay card for address/map.",
+      "image_url": "https://images.pexels.com/photos/30824415/pexels-photo-30824415.jpeg"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": "https://images.unsplash.com/photo-1764776264351-8a9c86d05338",
+      "clinical_detail": "https://images.unsplash.com/photo-1565090567208-c8038cfcf6cd",
+      "venue_exterior": "https://images.pexels.com/photos/30824415/pexels-photo-30824415.jpeg",
+      "speaker_podium": "https://images.unsplash.com/photo-1764874299006-bf4266427ec9",
+      "abstract_blue": "https://images.unsplash.com/photo-1728925021153-8e9955ca0a9d"
+    },
+    "icons": "Lucide React (Stethoscope, Calendar, MapPin, User, ArrowRight)"
+  },
+  "instructions_to_main_agent": [
+    "1. INSTALL DEPENDENCIES: npm install framer-motion lenis lucide-react clsx tailwind-merge",
+    "2. SETUP FONTS: Add Playfair Display and Manrope via Google Fonts in index.css",
+    "3. TAILWIND CONFIG: Update tailwind.config.js with the colors and font families defined above.",
+    "4. ANIMATION: Implement Lenis smooth scrolling in App.js immediately.",
+    "5. MOCKING: Mock the Razorpay payment flow. Do not try to implement real payments.",
+    "6. ACCESSIBILITY: Ensure Gold text (#D4AF37) is only used on Dark backgrounds (#002366). On white backgrounds, use a darker gold (#8A7018) or standard text color.",
+    "7. DATA-TESTID: Add data-testid to all buttons and inputs (e.g., 'register-btn', 'contact-email')."
+  ],
+  "universal_guidelines": {
+    "theme": "Light Mode base, but with heavy 'Royal Blue' sections (Hero, Footer).",
+    "border_radius": "rounded-xl",
+    "button_style": "Pill-shaped or slightly rounded (rounded-lg). Primary button: Royal Blue bg + Gold text or Gold bg + Royal Blue text.",
+    "glass_effect": "Use backdrop-blur-md for overlays, but keep text legible."
+  }
+}

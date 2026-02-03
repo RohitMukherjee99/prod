@@ -1,0 +1,58 @@
+{
+  "summary": {
+    "total_tests": 8,
+    "passed_tests": 7,
+    "success_rate": 0.875,
+    "timestamp": "2026-02-02T17:31:13.748901"
+  },
+  "detailed_results": [
+    {
+      "test": "API Root",
+      "status": "PASS",
+      "details": "Status: 200, Message: Welcome to 3RD OSI CONFERENCE KOLKATA 2026 API",
+      "timestamp": "2026-02-02T17:31:13.357761"
+    },
+    {
+      "test": "Health Check",
+      "status": "PASS",
+      "details": "Status: 200, Status: healthy",
+      "timestamp": "2026-02-02T17:31:13.399608"
+    },
+    {
+      "test": "Pricing Endpoint",
+      "status": "PASS",
+      "details": "Status: 200, Has registration pricing: True, Has accommodation: True",
+      "timestamp": "2026-02-02T17:31:13.437935"
+    },
+    {
+      "test": "Contact Submission",
+      "status": "PASS",
+      "details": "Status: 200, Contact ID: 8f362728-289a-4aa7-8d85-c177cc12d991",
+      "timestamp": "2026-02-02T17:31:13.534307"
+    },
+    {
+      "test": "Registration Retrieval",
+      "status": "PASS",
+      "details": "Status: 200, Name: Dr. Test User",
+      "timestamp": "2026-02-02T17:31:13.628317"
+    },
+    {
+      "test": "Get Contacts",
+      "status": "PASS",
+      "details": "Status: 200, Contact count: 3",
+      "timestamp": "2026-02-02T17:31:13.670707"
+    },
+    {
+      "test": "Get Registrations",
+      "status": "PASS",
+      "details": "Status: 200, Registration count: 2",
+      "timestamp": "2026-02-02T17:31:13.711376"
+    },
+    {
+      "test": "Payment Create Order",
+      "status": "FAIL",
+      "details": "Create Order - Status: 520, Error: {\"detail\":\"Payment gateway not configured\"}",
+      "timestamp": "2026-02-02T17:31:13.747995"
+    }
+  ]
+}
